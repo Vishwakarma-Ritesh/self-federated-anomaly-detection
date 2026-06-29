@@ -97,85 +97,11 @@ The objective of SFAD was to build a platform capable of:
 
 ## 1. Hybrid ML-Based Detection
 
-The system combines two anomaly detection models:
-
-### Isolation Forest
-
-Used for infrastructure anomaly detection:
-
-* CPU spikes
-* Memory leakage
-* Disk saturation
-* Network anomalies
-
-### Autoencoder Neural Network
-
-Used for behavioral anomaly detection from:
-
-* Logs
-* Error patterns
-* Hidden abnormal activity
-
-Both outputs are combined using **decision fusion** for better accuracy.
-
----
-
 ## 2. Federated Learning
-
-Instead of centralized training, SFAD uses **Federated Learning**.
-
-Benefits:
-
-* Better privacy
-* No raw telemetry sharing
-* Distributed model updates
-* Improved scalability
-
----
 
 ## 3. Zero Trust Security (Cyber Jail)
 
-Security follows:
-
-> Never Trust, Always Verify
-
-Suspicious workloads are:
-
-* Detected
-* Validated
-* Isolated
-* Quarantined
-
-This isolation mechanism is called **Cyber Jail**.
-
-Example flow:
-
-Threat Detected → Security Validation → Quarantine → Block Access
-
----
-
 ## 4. Automated Remediation
-
-After anomaly detection, the system can automatically perform recovery actions.
-
-Examples:
-
-### Memory Leak
-
-* Restart service
-
-### DDoS Attack
-
-* Reroute traffic
-* Scale load balancer
-
-### CPU Starvation
-
-* Throttle low-priority workloads
-
-This enables **self-healing infrastructure behavior**.
-
----
 
 ## 5. Observability Dashboard
 
@@ -218,225 +144,29 @@ Observability Dashboard
 (Metrics / Logs / Alerts / Reports)
 ```
 
----
+# Self-Federated Anomaly Detection
 
-# Components
+This repository contains the core materials for the Self-Federated Anomaly Detection (SFAD) project. It includes a visual diagram that illustrates the system architecture and a research paper that provides the theoretical and technical background of the approach.
 
-## 1. Cloud Infrastructure Layer
+## Project Purpose
 
-This is the source of telemetry.
+Self-Federated Anomaly Detection is focused on identifying abnormal or suspicious patterns in distributed systems while maintaining the principles of federated learning and privacy-aware computation. The goal is to detect anomalies effectively without compromising data ownership, security, or scalability.
 
-Resources include:
+## Repository Contents
 
-* Virtual machines
-* Containers
-* Servers
-* Applications
+- diagram.png: A visual representation of the system workflow and architecture.
+- Research paper SFAD system.pdf: The full research paper describing the methodology, concepts, and implementation details of the proposed system.
 
-These continuously generate operational data.
+## Overview
 
----
+The project explores how anomaly detection can be implemented in a federated environment, where multiple participants contribute to model learning while keeping their local data private. This makes the approach especially relevant for applications in cybersecurity, distributed monitoring, and privacy-sensitive data analysis.
 
-## 2. Edge Client Layer
+## Diagram
 
-Collectors gather:
+The diagram included in this repository provides a high-level summary of the system structure and information flow.
 
-* CPU usage
-* Memory usage
-* Disk I/O
-* Network traffic
-* Logs
+## Notes
 
-This telemetry is forwarded to the inference engine.
+- Use the PDF document for a deeper understanding of the research background.
+- Refer to the diagram for a quick visual explanation of the proposed system.
 
----
-
-## 3. Inference Engine Layer
-
-This is the intelligence layer.
-
-Responsibilities:
-
-* Process telemetry
-* Detect anomalies
-* Perform analysis
-* Generate predictions
-* Trigger alerts
-
----
-
-## 4. Security Layer
-
-Implements:
-
-* Zero Trust validation
-* Threat analysis
-* Access control
-* Node isolation
-
-Compromised workloads are quarantined using **Cyber Jail**.
-
----
-
-## 5. Automated Remediation Layer
-
-Makes the infrastructure self-healing.
-
-Actions include:
-
-* Restart service
-* Scale resources
-* Block access
-* Reroute traffic
-
----
-
-## 6. Observability Dashboard
-
-Used by engineers to monitor:
-
-* Alerts
-* Metrics
-* Incidents
-* Root cause reports
-
----
-
-# Tech Stack
-
-## Backend
-
-* Python
-* FastAPI
-
-## Machine Learning
-
-* Isolation Forest
-* Autoencoder
-* Federated Learning
-
-## Security
-
-* Zero Trust Architecture
-* Cyber Jail
-* Threat Isolation
-
-## Observability
-
-* Streamlit
-* Plotly
-
-## Cloud Concepts
-
-* Telemetry Pipelines
-* Distributed Systems
-* Monitoring
-* Reliability Engineering
-
----
-
-# My Contribution
-
-I contributed to this project as a **Cloud Infrastructure & DevOps Mentor**.
-
-My role was to help students bridge the gap between academic implementation and real-world production engineering.
-
-## 1. Cloud Infrastructure Architecture
-
-Guided students in designing scalable cloud architecture.
-
-Covered:
-
-* Layered architecture
-* Distributed systems
-* Scalability planning
-* Production design patterns
-
----
-
-## 2. Security Architecture Guidance
-
-Mentored them on:
-
-* Zero Trust Security
-* Threat isolation
-* Secure communication
-* Access control design
-
-This directly influenced the **Cyber Jail** implementation.
-
----
-
-## 3. DevOps & Deployment Best Practices
-
-Introduced production deployment concepts:
-
-* CI/CD pipelines
-* Containerized workloads
-* Infrastructure automation
-* Release strategy
-* Rollback planning
-
----
-
-## 4. Observability & Monitoring
-
-Taught production-grade monitoring concepts:
-
-* Telemetry collection
-* Dashboards
-* Alerts
-* Incident visibility
-* Root cause analysis
-
----
-
-## 5. Industry-Level Engineering Thinking
-
-Helped students think like engineers solving real infrastructure problems.
-
-Mentored them on:
-
-* Scalability tradeoffs
-* Reliability engineering
-* Fault isolation
-* Production readiness
-
----
-
-# Project Outcome
-
-This contribution helped students:
-
-* Understand cloud infrastructure
-* Learn security-first architecture
-* Connect research with industry
-* Build a production-oriented system
-
-Key achievements:
-
-* ~94% anomaly detection accuracy
-* Reduced detection time to seconds
-* Automated remediation workflow
-* Improved security posture
-
----
-
-# Key Learnings
-
-This project demonstrated how **AI + Cloud Infrastructure + Security + DevOps** can work together to build intelligent, self-healing systems.
-
-It also reinforced the importance of:
-
-* Production thinking
-* Security-first design
-* Observability
-* Infrastructure reliability
-
----
-
-# Personal Note
-
-As a DevOps Engineer, I strongly believe in contributing to student and community projects that bridge the gap between **academic learning and real-world engineering practices**.
-
-Helping students understand **cloud infrastructure, security, DevOps, and production architecture** at a practical level is something I genuinely value.
