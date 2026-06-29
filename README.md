@@ -2,7 +2,8 @@
 
 This repository contains materials related to the Self-Federated Anomaly Detection (SFAD) project, including a visual diagram and the accompanying research paper.
 
-## Contents
+## Contents<img width="1536" height="1024" alt="diagram" src="https://github.com/user-attachments/assets/5403ab26-6c27-42a2-86a6-afeef778d20c" />
+
 
 - [diagram.png](diagram.png) — architecture / workflow diagram for the system
 - [Research paper SFAD system.pdf](Research%20paper%20SFAD%20system.pdf) — reference paper for the project
